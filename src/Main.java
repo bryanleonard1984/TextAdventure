@@ -1,12 +1,10 @@
 import scenes.title.SelectionPane;
 import scenes.title.Title;
 import utils.Globals;
-import utils.KeyHandler;
 import utils.Switches;
 
 public class Main {
     static Globals globals = new Globals();
-    static KeyHandler keyHandler = new KeyHandler();
 
     public static void main(String[] args)
     {
@@ -22,7 +20,7 @@ public class Main {
         Globals.frame.add(Globals.title);
         SelectionPane select = new SelectionPane();
         Globals.frame.add(select);
+
         Globals.frame.setVisible(true);
-        Globals.frame.addKeyListener(keyHandler);
     }
 }
