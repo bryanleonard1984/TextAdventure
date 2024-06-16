@@ -15,14 +15,17 @@ public class SelectionPane extends JPanel {
         this.setBounds(500, 500, 500, 500);
         this.setBackground(Globals.mainBack);
         this.setLayout(null);
-        JLabel lblNewGame = this.globals.createLabel("New Game", 10, 10, 480, 50,
+        JLabel lblNewGame = globals.createLabel("New Game", 10, 10, 480, 50,
                 Globals.fontTitleSelect, Globals.colorTitle, 0);
-        JLabel lblLoad = this.globals.createLabel("Load Game", 10, 100, 480, 50,
+        JLabel lblLoad = globals.createLabel("Load Game", 10, 100, 480, 50,
                 Globals.fontTitleSelect, Globals.colorTitle, 0);
-        JLabel lblExit = this.globals.createLabel("Press ESC or '-' to quit.", 10, 440, 480, 50,
+        JLabel lblControls = globals.createLabel("Controls", 10, 190, 480, 50,
+                Globals.fontTitleSelect, Globals.colorTitle, 0);
+        JLabel lblExit = globals.createLabel("Press ESC or '-' to quit.", 10, 440, 480, 50,
                 Globals.fontTitleMsg, Globals.colorTitle, 0);
-        lblNewGame.addMouseListener(this.mouseHandler);
-        lblLoad.addMouseListener(this.mouseHandler);
+        lblNewGame.addMouseListener(mouseHandler);
+        lblLoad.addMouseListener(mouseHandler);
+        lblControls.addMouseListener(mouseHandler);
         this.add(lblNewGame);
         this.add(lblLoad);
         this.add(lblExit);
