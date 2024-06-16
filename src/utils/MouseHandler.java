@@ -25,6 +25,11 @@ public class MouseHandler implements MouseListener
                 break;
             case "Load Game":
                 System.out.println("Loading game.");
+            case "Controls":
+                System.out.println("Controls");
+                break;
+            default:
+                break;
         }
 
     }
@@ -36,6 +41,7 @@ public class MouseHandler implements MouseListener
             case 0:
                 l.setForeground(Globals.colorTitleSelect);
             default:
+                break;
         }
     }
     @Override public void mouseExited(MouseEvent e)
@@ -45,6 +51,7 @@ public class MouseHandler implements MouseListener
             case 0:
                 l.setForeground(Globals.colorTitle);
             default:
+                break;
         }
     }
 }
