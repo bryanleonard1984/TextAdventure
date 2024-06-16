@@ -28,6 +28,7 @@ public class SelectionPane extends JPanel {
         lblControls.addMouseListener(mouseHandler);
         this.add(lblNewGame);
         this.add(lblLoad);
+        this.add(lblControls);
         this.add(lblExit);
     }
 }
