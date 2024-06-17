@@ -12,14 +12,42 @@ public class KeyHandler implements KeyListener
     @Override public void keyPressed(KeyEvent e)
     {
         int code = e.getKeyCode();
-        switch (code) {
+        int frame = Switches.windowID;
+        switch (code)
+        {
             case KeyEvent.VK_ESCAPE, KeyEvent.VK_SUBTRACT:
-                globals.exitFrame(Switches.windowID);
-                break;
+                switch(frame)
+                {
+                    case 0:
+                        exitMessage(frame);
+                        globals.exitFrame(0);
+                        break;
+                    case 1:
+                        exitMessage(frame);
+                        globals.exitFrame(1);
+                        break;
+                    case 2:
+                        exitMessage(frame);
+                        //future update
+                        break;
+                    case 3:
+                        exitMessage(frame);
+                        globals.exitFrame(3);
+                        Globals.frame.setEnabled(true);
+                        Switches.windowID = 0;
+                        break;
+                    default:
+                        break;
+                }
             default:
                 break;
         }
     }
 
+    //For testing purposes
+    private void exitMessage(int id)
+    {
+        System.out.println("Exiting frame " + id);
+    }
 
 }
